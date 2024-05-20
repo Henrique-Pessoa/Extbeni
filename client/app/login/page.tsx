@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { Icon } from "@iconify/react";
 import { tree } from "next/dist/build/templates/app-page";
 
 export default function Home() {
