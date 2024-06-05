@@ -1,4 +1,6 @@
 import { Header } from "@/components/Header";
+import { MapComponent } from "@/components/Map";
+import { MapProvider } from "@/providers/map-provider";
 
 export default function Home() {
   return (
@@ -24,7 +26,37 @@ export default function Home() {
           </div>
         </div>
         <div className="w-[calc(100vw-14rem)] h-screen bg-[#4F5D75] flex flex-row justify-between items-center">
-
+          <div className="w-[85%] h-[80%] m-auto flex flex-row items-center justify-center gap-3">
+            <div className="bg-[#BCD8B7] h-full w-[30%] p-8 rounded-tl-md rounded-bl-md flex justify-center items-center">
+              <p className="text-[#5F5379] text-4xl font-bold text-center">
+                O Apoio Missionário é mais do que uma cooperativa; é uma família unida pelo desejo comum de fazer o bem. Convidamos você a se juntar a nós nessa jornada de compaixão e solidariedade. Juntos, podemos aquecer corações, um agasalho de cada vez.
+              </p>
+            </div>
+            <div className="flex flex-col gap-2 h-full w-[70%]">
+              <div className="bg-[#BCD8B7] flex flex-row w-full h-[33%] rounded-tr-md justify-evenly items-center">
+                <p className="text-[#5F5379] text-3xl font-bold text-center">
+                  "Aquecendo Corações, Vestindo Vidas."
+                </p>
+                <img src="images/lema1.png" className="rounded-sm w-[30%] h-[80%]" />
+              </div>
+              <div className="bg-[#BCD8B7] flex flex-row w-full h-[33%] p-4 items-center justify-center">
+                <p className="text-[#5F5379] text-3xl font-bold text-center">
+                  "Doar é Amar em Ação."
+                </p>
+                <img src="images/lema2.jpeg" className="rounded-sm w-[25%] h-[90%] relative left-[15%]" />
+              </div>
+              <div className="bg-[#BCD8B7] flex flex-row w-full h-[33%] p-4 rounded-br-md justify-center items-center">
+                <p className="text-[#5F5379] text-3xl font-bold text-center">
+                  "Um Agasalho, Um Sorriso, Uma Comunidade Fortalecida."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-[calc(100vw-14rem)] h-screen bg-[#4F5D75] flex flex-col">
+          <MapProvider>
+            <MapComponent />
+          </MapProvider>
         </div>
       </main >
     </>
